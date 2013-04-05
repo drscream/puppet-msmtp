@@ -1,0 +1,21 @@
+##
+## msmtprc
+##
+
+# Accounts will inherit settings from this section
+defaults
+	maildomain <%= fqdn %>
+	auth on
+	tls on
+	auto_from on
+	aliases /etc/aliases
+
+# A provider's service
+account core
+	host <%= mailhost %>
+	user <%= mailuser %>
+	password <%= mailpass %>
+	tls_fingerprint <%= mailfingerprint %>
+
+# Set a default account
+account default : core

@@ -1,0 +1,16 @@
+# Basic system aliases -- these MUST be present.
+# General redirections for pseudo accounts.
+# MAILER-DAEMON:      postmaster
+# postmaster:         root
+# Standard RFC2142 aliases
+# They will not work with msmtp
+
+# Well-known aliases -- these should be filled in!
+root:               <%= mailaddrroot %>
+operator:           <%= mailaddrroot %>
+
+# Default mail alias for msmtp
+default:            <%= mailaddrroot %>
+
+# trap decode to catch security attacks
+# decode:           /dev/null
